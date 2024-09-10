@@ -9,34 +9,16 @@
 
 /* Estilo para el header */
 .styleHeader {
-    color: #ECF0F1; /* Texto claro */
-    padding: 20px;
-    text-align: center; /* Centra el contenido */
-    font-size: 1.5rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
 }
 
 /* Estilo para el main */
 .styleMain {
-    color: #ECF0F1;
-    padding: 10px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.9rem;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+ 
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);           
 }
 
 /* Estilo para el footer */
 .styleFooter {
-    
-    color: #ECF0F1;
-    padding: 10px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.9rem;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
 }

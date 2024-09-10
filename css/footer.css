@@ -1,0 +1,14 @@
+.styleFooter{
+    display: grid;
+}
+
+.seccion1{
+    width: 100%;
+    height: 100%;
+}
+
+.seccion1 img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+}
