@@ -1,3 +1,4 @@
+import { lista_stacks } from "../data/dataHabilidades.js";
 import { perfilData } from "../data/dataPerfil.js";
 let div_footer = document.querySelector(".styleFooter")
 
@@ -26,4 +27,20 @@ function perfil(){
 }
 perfil()
 
+//funcion para agregar mis habilidades
 
+function cargar_stacks(){
+
+    let div_stacks = document.querySelector(".seccion2");
+
+    lista_stacks.forEach(element => {
+        let div = document.createElement("div");
+        div.className =element.className;
+        div.innerHTML =`
+            <img src="${element.src}" alt="${element.nombre}">
+        `;
+        div_stacks.appendChild(div);
+    });
+}
+
+cargar_stacks()
