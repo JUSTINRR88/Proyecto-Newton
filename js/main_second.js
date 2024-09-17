@@ -1,4 +1,5 @@
 import { dataProyectos } from "../data/dataProyectos.js";
+import { dataTegnologias } from "../data/dataTegnologias.js";
 
 let seconMain = document.querySelector(".styleMain");
 
@@ -18,7 +19,7 @@ function cargarProyectos(){
         <a href="${element.link}">
         <img src="${element.img}" alt="">
         </a>
-            <h3>${element.nombre}</h3>
+            <h3>${element.nombre}</h3> 
             <a href="${element.btn}" class="btn">GitHub</a>
         `
 
@@ -27,3 +28,20 @@ function cargarProyectos(){
 }
 
 cargarProyectos()
+
+function cargarTegnologias(){
+    let div_tegnologias = document.querySelector(".logros");
+    dataTegnologias.forEach(element => {
+        let div = document.createElement("div")
+        div.classList.add("styleTegnologias")
+
+        div.innerHTML = ` 
+            <h3>${element.nombre}</h3> 
+            <img src="${element.img}" alt="">
+
+
+        `
+        div_tegnologias.appendChild(div)
+       });
+}
+cargarTegnologias();
