@@ -1,31 +1,53 @@
-// Selecciona el elemento con la clase "styleHeader" en el DOM donde se insertará el contenido del encabezado
-let div_header = document.querySelector(".styleHeader");
+// Llama a la función para cargar las tecnologías (logros) en la página si es necesario
+// cargarTegnologias();
+import { cargar_stacks } from "./footer.js";
+import { cargarProyectos, cargarTegnologias } from "./main_second.js";
 
-// Inserta contenido HTML dentro del div del encabezado
+// Funcionalidad del header
+let div_header = document.querySelector(".styleHeader");
 div_header.innerHTML = `
-    <!-- Sección del encabezado principal con un enlace a GitHub y el nombre -->
     <div class="seccionHeader">
         <a href="https://github.com/JUSTINRR88">
-            <!-- Imagen del logo de GitHub, que actúa como enlace al perfil de GitHub -->
             <img src="https://raw.githubusercontent.com/JUSTINRR88/Imagenes-del-Proyecto/main/github-512.webp" alt="GitHub Profile">
         </a>
-        <!-- Título con el nombre completo -->
         <h1>Justin Carlos Bercian Muñoz</h1>
     </div>
-
-    <!-- Sección secundaria del encabezado que contiene un menú de navegación -->
     <div class="seccionHeader1">
-        <nav> <!-- Inicia la barra de navegación -->
-            <ul class="menu"> <!-- Lista de elementos del menú -->
-                <!-- Elemento del menú con enlace a la sección de proyectos -->
+        <nav>
+            <ul class="menu">
                 <li><a class="btn1" href="#proyectos">Proyectos</a></li>
-                <!-- Elemento del menú con enlace a la sección de habilidades -->
-                <li><a href="#habilidades">Habilidades</a></li>
-                <!-- Elemento del menú con enlace a la sección de logros -->
-                <li><a href="#logros">Logros</a></li>
+                <li><a class="btn2" href="#habilidades">Habilidades</a></li>
+                <li><a class="btn3" href="#logros">Logros</a></li>
             </ul>
-        </nav> <!-- Fin de la barra de navegación -->
+        </nav>
     </div>
 `;
 
+// Agrega funcionalidad al botón para mostrar solo los proyectos
+let header_boton = document.querySelector(".btn1");
+function mostrarProyectos() {
+    cargarProyectos();
+}
 
+// Agrega el evento de clic al botón
+header_boton.addEventListener("click", mostrarProyectos);
+
+// Función que se ejecuta al hacer clic en el botón de Habilidades
+function mostrarHabilidades() {
+    cargar_stacks(); // Llama a la función cargar_stacks para mostrar las habilidades en seconMain
+}
+
+// Asocia el evento click del botón .btn2 a la función mostrarHabilidades
+let header_boton2 = document.querySelector(".btn2");
+header_boton2.addEventListener("click", mostrarHabilidades);
+
+
+
+let header_boton3 = document.querySelector(".btn3");
+function mostrarLogros() {
+    cargarTegnologias();
+
+}
+
+// Agrega el evento de clic al botón
+header_boton3.addEventListener("click", mostrarLogros);

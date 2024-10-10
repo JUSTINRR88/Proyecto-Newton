@@ -2,33 +2,32 @@
     display: flex;
     flex-direction: column;
     gap: 5rem;  
-    background-color: #1e293b;
-    border-radius: 1rem;
-
+    background-color: #010e23; /* Azul claro moderno */
+    justify-content: center;
 
 }
 
-.proyectos  {
-    height: 20rem;
+.proyectos {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14rem; /* Ajusté el gap para no separar tanto los elementos */
+    flex-wrap: wrap; /* Permite que los proyectos se ajusten en varias filas */
+    justify-content: space-between; /* Centra los proyectos horizontalmente */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    gap: 2rem; /* Espacio entre los elementos */
     padding: 2rem; /* Espacio adicional alrededor */
 }
 
 .styleProyecto {
-    width: 12rem; /* Un poco más ancho para mejorar el balance visual */
-    height: 14rem; /* Más alto para un contenido más equilibrado */
+    width: 30rem; /* Ancho fijo para todos los proyectos */
+    height: auto; /* Ajusta la altura según el contenido */
     display: flex;
-    flex-direction: column;
-    border: 1px solid #e2e8f0; /* Color más suave para el borde */
-    border-radius: 0.75rem; /* Borde ligeramente más suave */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para mayor profundidad */
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    border: 1px solid #e2e8f0; /* Borde suave */
+    border-radius: 0.75rem; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
-    overflow: hidden; /* Para asegurar que nada salga del contenedor */
-    background-color: white;
-    align-items: center;
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    background-color: #ffffff; /* Fondo blanco */
+    align-items: center; /* Centra los elementos dentro del div */
 }
 
 .styleProyecto:hover {
@@ -37,79 +36,241 @@
 }
 
 .styleProyecto img {
-    object-fit: cover;
-    width: 100%;
-    height: 8rem; /* Más altura para la imagen */
-    border-top-left-radius: 0.75rem;
-    border-top-right-radius: 0.75rem;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+    width: 30rem; /* Imagen ocupa todo el ancho del contenedor */
+    height: 10rem; /* Altura fija para las imágenes */
+    border-top-left-radius: 0.75rem; /* Bordes redondeados en la parte superior */
+    border-top-right-radius: 0.75rem; /* Bordes redondeados en la parte superior */
 }
 
 .styleProyecto .content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 1rem; /* Espacio interno en el contenido */
+    display: flex; /* Flexbox para el contenido */
+    flex-direction: column; /* Alinea el contenido verticalmente */
+    flex-grow: 1; /* Permite que este div crezca y ocupe el espacio disponible */
+    justify-content: space-between; /* Espacio entre los elementos */
 }
 
 .styleProyecto h3 {
-    font-size: 1.25rem;
-    color: #1e293b; /* Azul oscuro para el texto */
-    margin-bottom: 0.5rem;
-    font-weight: 900;
+    font-size: 1.5rem; /* Tamaño del texto del título */
+    color: #1e293b; /* Color azul oscuro para el texto */
+    margin: 0.5rem 0; /* Márgenes superior e inferior */
+    font-weight: 700; /* Peso de fuente */
+    text-align: center; /* Centra el texto del título */
 }
 
 .styleProyecto p {
-    font-size: 0.875rem;
+    font-size: 1rem; /* Tamaño del texto de la descripción */
     color: #64748b; /* Texto secundario en gris */
+    margin: 0.5rem 0; /* Márgenes para separar los párrafos */
+    text-align: center; /* Centra el texto */
+    font-weight: 700; /* Peso de fuente */
+
 }
 
-.btn{
-    width: 4rem;
-    height: 2rem;
+.btn {
+    width: 100%; /* El botón ocupa todo el ancho del contenedor */
+    padding: 0.75rem; /* Espaciado interno del botón */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    color: white;
-    background-color: black;
+    justify-content: center; /* Centra el texto del botón */
+    align-items: center; /* Centra verticalmente el texto */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    text-decoration: none; /* Sin subrayado en el texto */
+    font-weight: 600; /* Peso de fuente */
+    color: white; /* Color del texto */
+    background-color: #1e293b; /* Color de fondo del botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
 }
 
-.logros{
-    width: 40%;
-    height: 20rem;
+.btn:hover {
+    background-color: #3b82f6; /* Color de fondo al pasar el mouse */
+}
+
+/* Contenedor principal de la sección de logros */
+.logros {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
+/* Estilo de cada tarjeta de logro o tecnología */
 .styleTegnologias {
-    width: 10rem; /* Un poco más ancho para mejorar el balance visual */
-    height: 10rem; /* Más alto para un contenido más equilibrado */
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.75rem; /* Borde ligeramente más suave */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para mayor profundidad */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
-    overflow: hidden; /* Para asegurar que nada salga del contenedor */
-    background-color: white;
-    align-items: center;
-    font-size: 2rem;
+    width: 20rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #ffffff, #f8f8f8); /* Fondo degradado sutil */
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra de tarjeta */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    overflow: hidden;
 }
 
+/* Efecto al hacer hover en cada tarjeta */
+.styleTegnologias:hover {
+    transform: translateY(-8px); /* Efecto de elevación */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    border: 1px solid #3b82f6; /* Cambio de color de borde */
+}
 
+/* Estilo para el nombre del logro o tecnología */
+.styleTegnologias h3 {
+    font-size: 1.4rem;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    font-weight: 600; /* Peso de fuente más grueso */
+}
 
+/* Estilo para la imagen del certificado o tecnología */
 .styleTegnologias img {
-
-    width: 100%;
-    height: 100%; /* Más altura para la imagen */
-    border-top-left-radius: 0.75rem;
-    border-top-right-radius: 0.75rem;
+    width: 5rem; /* Tamaño de la imagen */
+    height: 5rem;
+    border-radius: 50%; /* Imagen circular */
+    border: 2px solid #e0e0e0; /* Borde alrededor de la imagen */
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, border 0.3s ease;
 }
 
+/* Efecto al hacer hover en la imagen */
+.styleTegnologias img:hover {
+    transform: scale(1.1); /* Efecto de zoom */
+    border: 2px solid #3b82f6; /* Cambio de color del borde */
+}
 
-.styleTegnologias:hover{
-    width: 50rem; /* Un poco más ancho para mejorar el balance visual */
-    height: 40rem;
+/* Estilo para la descripción del logro */
+.styleTegnologias p {
+    font-size: 0.95rem;
+    color: #6b7280; /* Color de texto gris suave */
+    line-height: 1.6;
+    margin-top: 0.75rem;
+    padding: 0 1rem;
+}
+
+/* Estilo para los enlaces de certificados o diplomas */
+.styleTegnologias a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background-color: #3b82f6; /* Color de fondo del botón */
+    border-radius: 0.5rem;
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en los enlaces */
+.styleTegnologias a:hover {
+    background-color: #1e40af; /* Cambio de color del fondo */
+}
+
+.habilidades div {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3b82f6;
+    border-radius: 50%;
+    margin: 1rem;
+    background-color: #676f7b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 2px solid transparent; /* Borde inicial transparente */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Transiciones suaves */
+}
+
+.habilidades div:hover {
+    background-color: #3b82f6; /* Cambio de color de fondo al hacer hover */
+    color: #ffffff; /* Cambio de color del texto al hacer hover */
+    transform: scale(1.1); /* Efecto de zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más marcada al hacer hover */
+    border: 2px solid #ffffff; /* Borde blanco visible al hacer hover */
+}
+
+.habilidades img {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Estilo para los stacks */
+.div_stacks {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+    grid-auto-rows: 3.5rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_stacks>div {
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    position: relative;
+}
+
+.div_stacks>div:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: 0.5s;
+}
+
+.div_stacks img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.info-hobbies {
+    background-color: #1e293b; /* Fondo azul oscuro profesional */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    color: #ffffff; /* Texto blanco */
+    max-width: 600px;
+    width: 100%;
+    margin: 20rem auto; /* Centrando la sección */
+}
+
+.info-hobbies h2 {
+    font-size: 2rem;
+    color: #3b82f6; /* Azul claro */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3b82f6; /* Línea inferior */
+    padding-bottom: 0.5rem;
+}
+
+.info-hobbies h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.hobbies ul {
+    list-style-type: none; /* Eliminando las viñetas */
+    padding: 0;
+}
+
+.hobbies ul li {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    background-color: #011330; /* Azul claro para resaltar */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.hobbies ul li:hover {
+    transform: scale(1.02); /* Efecto de zoom al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.hobbies ul li strong {
+    color: #3b82f6; /* Azul claro para el título de cada pasatiempo */
 }

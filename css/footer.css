@@ -1,30 +1,27 @@
 .styleFooter {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #010e23; /* Azul claro moderno */
-    gap: 1rem;
-    border: 3px solid #3b82f6; /* Azul claro */
     padding: 2rem 0;
-    border-radius: 1rem;
     font-family: 'Helvetica Neue', sans-serif; /* Tipografía más moderna */
 }
 
 .seccion1 {
     width: 90%;
-    height: 100%;
+    height: 50rem;
     background-color: #1e293b; /* Azul oscuro profesional */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
     border-radius: 1rem;
 }
 
 .descripcionContacto {
-    width: 28rem;
+    width: 100%;
     height: 100%;
     background-color: #011330; /* Azul claro moderno */
     display: flex;
@@ -79,75 +76,57 @@
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.seccion2{
+/* Estilo de la sección de habilidades */
+.habilidades {
     width: 90%;
     height: 90%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     align-items: center;
     justify-content: center;
-    background-color:#1e293b;
     border-radius: 1rem;
-
 }
-.seccion2 div {
-    width: 4rem;
-    height: 4rem;
+/* Estilos para la sección2 */
+.seccion2 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: #3b82f6;
-    border-radius: 50%;
-    margin: 1rem;
-    background-color: #676f7b;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border: 2px solid transparent; /* Borde inicial transparente */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Transiciones suaves */
+    height: 40%;
+    padding: 2rem;
 }
 
-.seccion2 div:hover {
-    background-color: #3b82f6; /* Cambio de color de fondo al hacer hover */
-    color: #ffffff; /* Cambio de color del texto al hacer hover */
-    transform: scale(1.1); /* Efecto de zoom */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más marcada al hacer hover */
-    border: 2px solid #ffffff; /* Borde blanco visible al hacer hover */
-}
-
-.seccion2 img{
-    width: 2rem;
-    height: 2rem;
-}
-
-.div_stacks {
+.info-personal {
+    background-color: #1e293b;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    max-width: 600px;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
-    grid-auto-rows: 3.5rem;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
 }
 
-.div_stacks>div {
-    border-radius: 3px;
-    background-color: #fff;
-    padding: 0.8rem;
-    cursor: pointer;
-    transition: 0.3s;
-
-    position: relative;
+.info-personal h2 {
+    font-size: 1.8rem;
+    color: #ffffff; /* Texto en blanco */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 0.5rem;
 }
 
-.div_stacks>div:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    transition: 0.5s;
+.info-personal p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #ffffff; /* Texto en blanco */
+
 }
 
-.div_stacks img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.info-personal strong {
+    color: #ffffff; /* Texto en blanco */
 }
 
+.info-personal p:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+    color: #ffffff; /* Texto en blanco */
 
+}

@@ -11,7 +11,7 @@
         padding: 1rem 2rem;
         background-color: #1e293b; /* Azul oscuro */
         color: #fff;
-        border-bottom: 3px solid #3b82f6; /* Azul claro */
+        border-bottom: 1px solid #3b82f6; /* Azul claro */
     }
     
     .seccionHeader {

@@ -10,6 +10,18 @@ div_footer.innerHTML = `
     <div class="seccion1"></div>  <!-- Sección para los datos personales -->
     <div class="seccion2"></div>  <!-- Sección para las habilidades técnicas -->
 `;
+let div_seccion2 = document.querySelector(".seccion2");
+div_seccion2.innerHTML = `
+<div class="info-personal">
+<h2>Información Personal</h2>
+<p><strong>Nombre:</strong> Justin Carlos Bercian Muñoz</p>
+<p><strong>Fecha de nacimiento:</strong> 2 de Abril del 2007</p>
+<p><strong>Nacionalidad:</strong> Guatemalteco</p>
+<p><strong>Edad:</strong> 17 años</p>
+<p><strong>Género:</strong> Masculino</p>
+<p><strong>Carrera Diversificado:</strong> Bachillerato en Ciencias y Letras con Orientación en Computación</p>
+</div>
+`
 
 // Selecciona el div de la primera sección (sección de datos personales)
 let div_seccion1 = document.querySelector(".seccion1");
@@ -38,10 +50,19 @@ function perfil() {
 // Llama a la función para cargar los datos del perfil en la primera sección del pie de página
 perfil();
 
+
 // Función para agregar las habilidades técnicas al DOM
-function cargar_stacks() {
-    // Selecciona el div de la segunda sección (sección de habilidades técnicas)
-    let div_stacks = document.querySelector(".seccion2");
+export function cargar_stacks() {
+    // Selecciona el contenedor principal (seconMain) para mostrar las habilidades
+    let div_stacks = document.querySelector(".styleMain"); 
+    
+    // Limpia el contenido actual del contenedor
+    div_stacks.innerHTML = `
+        <div class="habilidades"></div>     <!-- Contenedor de las habilidades -->
+    `;
+
+    // Selecciona el contenedor recién creado para las habilidades
+    let contenedor_habilidades = div_stacks.querySelector(".habilidades");
 
     // Itera sobre la lista de stacks (habilidades) y crea un div con una imagen representativa para cada habilidad
     lista_stacks.forEach(element => {
@@ -53,10 +74,8 @@ function cargar_stacks() {
             <img src="${element.src}" alt="${element.nombre}">  <!-- Imagen de la habilidad técnica -->
         `;
 
-        // Añade el div creado a la segunda sección del pie de página
-        div_stacks.appendChild(div);
+        // Añade el div creado al contenedor de habilidades
+        contenedor_habilidades.appendChild(div);
     });
 }
 
-// Llama a la función para cargar las habilidades técnicas en la segunda sección del pie de página
-cargar_stacks();
