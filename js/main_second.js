@@ -81,7 +81,7 @@ export function cargarTegnologias() {
         // Inserta el contenido HTML en el div, incluyendo el nombre, la imagen y la descripción
         div.innerHTML = `
             <h3>${element.nombre}</h3> <!-- Nombre de la tecnología -->
-            <img src="${element.img}" alt="${element.link}""> <!-- Imagen del certificado o diploma -->
+            <a href="${element.link}"><img src="${element.img}" alt=""> <!-- Imagendel certificado o diploma --> </a>
             <p>${element.descripcion}</p> <!-- Descripción del logro -->
         `;
 

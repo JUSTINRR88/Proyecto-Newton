@@ -1,9 +1,8 @@
 .styleMain{
     display: flex;
-    flex-direction: column;
-    gap: 5rem;  
     background-color: #010e23; /* Azul claro moderno */
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -166,66 +165,100 @@
 .styleTegnologias a:hover {
     background-color: #1e40af; /* Cambio de color del fondo */
 }
-
-.habilidades div {
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #3b82f6;
-    border-radius: 50%;
-    margin: 1rem;
-    background-color: #676f7b;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border: 2px solid transparent; /* Borde inicial transparente */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Transiciones suaves */
-}
-
-.habilidades div:hover {
-    background-color: #3b82f6; /* Cambio de color de fondo al hacer hover */
-    color: #ffffff; /* Cambio de color del texto al hacer hover */
-    transform: scale(1.1); /* Efecto de zoom */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más marcada al hacer hover */
-    border: 2px solid #ffffff; /* Borde blanco visible al hacer hover */
-}
-
-.habilidades img {
-    width: 2rem;
-    height: 2rem;
-}
-
-/* Estilo para los stacks */
-.div_stacks {
-    width: 100%;
+/* Estilo general del contenedor de habilidades */
+.habilidades {
+    width: 50rem;
+    height: auto; /* Cambiar a auto para que el contenedor ajuste la altura automáticamente */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
-    grid-auto-rows: 3.5rem;
-    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en el grid */
+    gap: 20px; /* Espacio entre las tarjetas de habilidad */
+    justify-items: center; /* Centra las tarjetas en su celda */
+    margin: 0 auto; /* Centra el contenedor */
     justify-content: center;
-    align-items: center;
+    padding: 1rem;
+    color: white;
 }
 
-.div_stacks>div {
-    border-radius: 3px;
-    background-color: #fff;
-    padding: 0.8rem;
-    cursor: pointer;
-    transition: 0.3s;
-
-    position: relative;
+/* Efecto de hover en el contenedor de la habilidad */
+.habilidades:hover {
+    border-radius: 10px;
+    background-color: #3f5594;
 }
 
-.div_stacks>div:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    transition: 0.5s;
+/* Estilo de la imagen de la habilidad */
+.habilidades img {
+    width: 2rem; /* Ancho de la imagen */
+    height: 2rem; /* Altura de la imagen */
+    object-fit: contain; /* Asegura que la imagen mantenga su relación de aspecto */
+    margin-bottom: 10px; /* Espacio entre la imagen y la descripción */
+    transition: transform 0.3s ease; /* Transición suave al hover */
+    border-radius: 5px;
 }
 
-.div_stacks img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.habilidades img:hover{
+    
+    background-color: #3f5594;
 }
+
+/* Estilo de la descripción de la habilidad */
+.habilidadDescriccion{
+
+    font-size: 14px; /* Tamaño de fuente */
+    text-align: center; /* Centra el texto */
+    line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
+    margin: 0; /* Sin margen para una mejor alineación */
+    padding: 0 10px; /* Espacio lateral en la descripción */
+    color: #f3f4f6;
+}
+
+/* Estilo de los títulos de habilidades */
+.habilidadTitulo {
+    font-size: 16px; /* Tamaño de fuente para el título */
+    font-weight: bold; /* Hacer el título más prominente */
+    color: #ffffff; /* Color del texto */
+    margin-bottom: 5px; /* Espacio inferior */
+    color: white;
+
+}
+
+
+
+/* Sección de perfil */
+.profile-section h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.profile-section p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #e2e8f0;
+}
+
+/* Título de habilidades */
+.profile-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Lista de habilidades */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+
+
 .info-hobbies {
     background-color: #1e293b; /* Fondo azul oscuro profesional */
     padding: 2rem;
@@ -234,7 +267,7 @@
     color: #ffffff; /* Texto blanco */
     max-width: 600px;
     width: 100%;
-    margin: 20rem auto; /* Centrando la sección */
+    margin: 20rem; /* Centrando la sección */
 }
 
 .info-hobbies h2 {
@@ -274,3 +307,55 @@
 .hobbies ul li strong {
     color: #3b82f6; /* Azul claro para el título de cada pasatiempo */
 }
+.profile-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #e9ebf0;
+}
+
+.profile-section h2 {
+    font-size: 2.2em;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+.profile-section p {
+    font-size: 1.1em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.profile-section h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #1e293b;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 5px;
+}
+
+.profile-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.profile-section ul li {
+    font-size: 1em;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-section ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-section ul li strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+

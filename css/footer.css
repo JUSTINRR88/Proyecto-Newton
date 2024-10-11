@@ -77,16 +77,7 @@
 }
 
 /* Estilo de la sección de habilidades */
-.habilidades {
-    width: 90%;
-    height: 90%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-}
+
 /* Estilos para la sección2 */
 .seccion2 {
     display: flex;

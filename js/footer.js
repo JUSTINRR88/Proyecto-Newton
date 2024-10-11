@@ -58,6 +58,10 @@ export function cargar_stacks() {
     
     // Limpia el contenido actual del contenedor
     div_stacks.innerHTML = `
+    <div class="profile-section">
+    <h2>Justin Carlos Bercian Muñoz</h2>
+    <p>Como desarrollador junior, estoy apasionado por aprender nuevas tecnologías y mejorar constantemente mis habilidades. A continuación, se presentan mis habilidades técnicas que me permiten contribuir eficazmente a proyectos de desarrollo web y colaborar en equipos multidisciplinarios:</p>
+  
         <div class="habilidades"></div>     <!-- Contenedor de las habilidades -->
     `;
 
@@ -71,7 +75,9 @@ export function cargar_stacks() {
 
         // Agrega el contenido HTML dentro del div con la imagen de la habilidad
         div.innerHTML = `
-            <img src="${element.src}" alt="${element.nombre}">  <!-- Imagen de la habilidad técnica -->
+            <img src="${element.src}" alt="${element.nombre}"><!-- Imagen de la habilidad técnica -->
+            <p class="habilidadDescriccion">${element.descripcion}</p> 
+
         `;
 
         // Añade el div creado al contenedor de habilidades
