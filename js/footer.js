@@ -35,7 +35,7 @@ function perfil() {
 
         // Agrega el contenido HTML dentro del div con la información del perfil (imagen, nombre, contacto, correo)
         div.innerHTML = `
-        <img src="${element.img}" alt="">  <!-- Imagen del contacto -->
+        <img src="${element}" alt="">  <!-- Imagen del contacto -->
         <div class="nombre">Contacto</div>  <!-- Texto "Contacto" -->
         <div class="nombre">Nombre: ${element.nombre}</div>  <!-- Nombre del contacto -->
         <div class="contacto">Numero: ${element.contacto}</div>  <!-- Número de contacto -->
